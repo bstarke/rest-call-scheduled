@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: rest-call-scheduled
+
+cron:
+  job:
+    schedule: "*/20 * * * * *"
+
+rest:
+  url: "https://eggdrop.cfapps.io/events"
