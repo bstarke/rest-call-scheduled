@@ -4,7 +4,9 @@ spring:
 
 cron:
   job:
-    schedule: "*/20 * * * * *"
+    schedule: "0 * * * * *" #Every minute
+    url: "https://eggdrop.cfapps.io/events/1"
 
-rest:
-  url: "https://eggdrop.cfapps.io/events"
+logging:
+  level:
+    io.pivotal.example: DEBUG

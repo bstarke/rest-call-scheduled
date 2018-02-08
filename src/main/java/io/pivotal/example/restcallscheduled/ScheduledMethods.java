@@ -9,21 +9,18 @@ import org.springframework.web.client.RestTemplate;
 
 @Component
 public class ScheduledMethods {
-
+    private final String cronJobUrl;
     private final Logger LOG = LoggerFactory.getLogger(this.getClass());
-
     private final RestTemplate restTemplate;
-    @Value("${rest.url}")
-    private String restUrl;
 
-
-    public ScheduledMethods(RestTemplate restTemplate) {
+    public ScheduledMethods(RestTemplate restTemplate, @Value("${cron.job.url}") String cronJobUrl) {
         this.restTemplate = restTemplate;
+        this.cronJobUrl = cronJobUrl;
     }
 
     @Scheduled(cron = "${cron.job.schedule}")
     public void makeRestCall() {
-        String response = restTemplate.getForObject(restUrl, String.class);
+        String response = restTemplate.getForObject(cronJobUrl, String.class);
         LOG.debug(response);
     }
 }
