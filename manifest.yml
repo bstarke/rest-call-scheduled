@@ -1,0 +1,14 @@
+---
+applications:
+- name: scheduled
+  memory: 1G
+  disk_quota: 512M
+  stack: cflinuxfs2
+  buildpack: java_buildpack_offline
+  path: build/libs/rest-call-scheduled-0.0.1-SNAPSHOT.jar
+#  services:
+#    - eggdrop-db
+#    - config-server
+#  env:
+#    JBP_CONFIG_OPEN_JDK_JRE: '[memory_calculator: {stack_threads: 100}]'
+#    JAVA_OPTS: '-XX:ReservedCodeCacheSize=140m -XX:MaxMetaspaceSize=64m'
