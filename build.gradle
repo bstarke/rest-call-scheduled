@@ -12,6 +12,9 @@ buildscript {
 plugins {
 	id "com.gorylenko.gradle-git-properties" version "1.4.17"
 }
+group = 'io.pivotal.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
 
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
@@ -20,9 +23,6 @@ springBoot {
 	buildInfo()
 }
 
-group = 'io.pivotal.example'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()

@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableScheduling
-class RestCallScheduledApplication {
+public class RestCallScheduledApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(RestCallScheduledApplication.class);
