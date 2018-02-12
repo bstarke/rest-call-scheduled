@@ -4,8 +4,8 @@ spring:
 
 cron:
   job:
-    schedule: "0 * * * * *" #Every minute
-    url: "https://eggdrop.cfapps.io/events/1"
+    schedule: "7 7 * * * *" #Every minute
+    url: "https://eggdrop.pcfbeta.io/events/4"
 
 logging:
   level:

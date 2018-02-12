@@ -9,9 +9,16 @@ buildscript {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 	}
 }
+plugins {
+	id "com.gorylenko.gradle-git-properties" version "1.4.17"
+}
 
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
+
+springBoot {
+	buildInfo()
+}
 
 group = 'io.pivotal.example'
 version = '0.0.1-SNAPSHOT'
