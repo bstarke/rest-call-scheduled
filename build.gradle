@@ -9,9 +9,11 @@ buildscript {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 	}
 }
+
 plugins {
 	id "com.gorylenko.gradle-git-properties" version "1.4.17"
 }
+
 group = 'io.pivotal.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
@@ -23,11 +25,10 @@ springBoot {
 	buildInfo()
 }
 
-
 repositories {
+	mavenLocal()
 	mavenCentral()
 }
-
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
